@@ -5,7 +5,7 @@ FROM node:lts-alpine
 WORKDIR /app
 
 # Copy project files
-COPY ./dist /app
+COPY ./ /app
 
 # expose port and define CMD
 EXPOSE 5000
