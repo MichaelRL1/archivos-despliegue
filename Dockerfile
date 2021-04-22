@@ -6,6 +6,7 @@ WORKDIR /app
 
 # Copy project files
 COPY ./ /app
+RUN ls ./app 
 
 # expose port and define CMD
 EXPOSE 5000
