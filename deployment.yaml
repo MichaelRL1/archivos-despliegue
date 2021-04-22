@@ -3,16 +3,13 @@ kind: Service
 metadata:
   name: hola-mundo
   namespace: default
-  annotations:
-    cloud.google.com/load-balancer-type: "External"
 spec:
-  ports:
-    - name: http
-      port: 80
-      protocol: TCP
-      targetPort: 8080
   selector:
     app: hola-mundo
+  ports:
+    - port: 80
+      targetPort: 8080
+  type: LoadBalancer
 ---
 apiVersion: "apps/v1"
 kind: "Deployment"
@@ -54,3 +51,5 @@ spec:
     resource:
       name: "cpu"
       targetAverageUtilization: 80
+
+
