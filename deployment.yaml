@@ -30,7 +30,7 @@ spec:
     spec:
       containers:
       - name: "hola-mundo"
-        image: "gcr.io/serene-circlet-311420/node-hello:29"
+        image: "gcr.io/serene-circlet-311420/node-hello"
 ---
 apiVersion: "autoscaling/v2beta1"
 kind: "HorizontalPodAutoscaler"
