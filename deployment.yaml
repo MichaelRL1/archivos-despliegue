@@ -3,6 +3,8 @@ kind: Service
 metadata:
   name: hola-mundo
   namespace: default
+  annotations:
+    cloud.google.com/load-balancer-type: "External"
 spec:
   ports:
     - name: http
@@ -31,7 +33,7 @@ spec:
     spec:
       containers:
       - name: "hola-mundo"
-        image: "gcr.io/serene-circlet-311420/node-hello"
+        image: "gcr.io/serene-circlet-311420/node-hello:29"
 ---
 apiVersion: "autoscaling/v2beta1"
 kind: "HorizontalPodAutoscaler"
